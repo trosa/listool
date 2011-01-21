@@ -1,0 +1,461 @@
+(dp1
+S'output'
+p2
+S''
+sS'layer'
+p3
+S'/home/tiago/listool/applications/listool/controllers/default.py'
+p4
+sS'code'
+p5
+S'# -*- coding: utf-8 -*-\n# this file is released under public domain and you can use without limitations\n\n#########################################################################\n## This is a samples controller\n## - index is the default action of any application\n## - user is required for authentication and authorization\n## - download is for downloading files uploaded in the db (does streaming)\n## - call exposes all registered services (none by default)\n#########################################################################\n\ndef index():\n    """\n    example action using the internationalization operator T and flash\n    rendered by views/default/index.html or views/generic.html\n    """\n    response.flash = T(\'You are successfully running web2py.\')\n\t\ta = get_courses()\n    return a\n\ndef user():\n    """\n    exposes:\n    http://..../[app]/default/user/login\n    http://..../[app]/default/user/logout\n    http://..../[app]/default/user/register\n    http://..../[app]/default/user/profile\n    http://..../[app]/default/user/retrieve_password\n    http://..../[app]/default/user/change_password\n    use @auth.requires_login()\n        @auth.requires_membership(\'group name\')\n        @auth.requires_permission(\'read\',\'table name\',record_id)\n    to decorate functions that need access control\n    """\n    return dict(form=auth())\n\n\ndef download():\n    """\n    allows downloading of uploaded files\n    http://..../[app]/default/download/[filename]\n    """\n    return response.download(request,db)\n\n\ndef call():\n    """\n    exposes services. for example:\n    http://..../[app]/default/call/jsonrpc\n    decorate with @services.jsonrpc the functions to expose\n    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv\n    """\n    session.forget()\n    return service()\n\n\n\nresponse._vars=response._caller(index)\n'
+p6
+sS'snapshot'
+p7
+(dp8
+S'exception'
+p9
+(dp10
+S'__getslice__'
+p11
+S"<method-wrapper '__getslice__' of exceptions.IndentationError object at 0x392de60>"
+p12
+sS'text'
+p13
+S"'\\t\\ta = get_courses()\\n'"
+p14
+sS'__str__'
+p15
+S"<method-wrapper '__str__' of exceptions.IndentationError object at 0x392de60>"
+p16
+sS'__reduce__'
+p17
+S'<built-in method __reduce__ of exceptions.IndentationError object at 0x392de60>'
+p18
+sS'__dict__'
+p19
+S'{}'
+p20
+sS'__sizeof__'
+p21
+S'<built-in method __sizeof__ of exceptions.IndentationError object at 0x392de60>'
+p22
+sS'__init__'
+p23
+S"<method-wrapper '__init__' of exceptions.IndentationError object at 0x392de60>"
+p24
+sS'__setattr__'
+p25
+S"<method-wrapper '__setattr__' of exceptions.IndentationError object at 0x392de60>"
+p26
+sS'__reduce_ex__'
+p27
+S'<built-in method __reduce_ex__ of exceptions.IndentationError object at 0x392de60>'
+p28
+sS'__new__'
+p29
+S'<built-in method __new__ of type object at 0x812600>'
+p30
+sS'__format__'
+p31
+S'<built-in method __format__ of exceptions.IndentationError object at 0x392de60>'
+p32
+sS'__class__'
+p33
+S"<type 'exceptions.IndentationError'>"
+p34
+sS'filename'
+p35
+S"'/home/tiago/listool/applications/listool/controllers/default.py'"
+p36
+sS'lineno'
+p37
+S'18'
+p38
+sS'msg'
+p39
+S"'unexpected indent'"
+p40
+sS'__doc__'
+p41
+S"'Improper indentation.'"
+p42
+sS'__getitem__'
+p43
+S"<method-wrapper '__getitem__' of exceptions.IndentationError object at 0x392de60>"
+p44
+sS'__setstate__'
+p45
+S'<built-in method __setstate__ of exceptions.IndentationError object at 0x392de60>'
+p46
+sS'__getattribute__'
+p47
+S"<method-wrapper '__getattribute__' of exceptions.IndentationError object at 0x392de60>"
+p48
+sS'print_file_and_line'
+p49
+S'None'
+p50
+sS'args'
+p51
+S"('unexpected indent', ('/home/tiago/listool/applications/listool/controllers/default.py', 18, 2, '\\t\\ta = get_courses()\\n'))"
+p52
+sS'__subclasshook__'
+p53
+S'<built-in method __subclasshook__ of type object at 0x812600>'
+p54
+sS'offset'
+p55
+S'2'
+sS'__unicode__'
+p56
+S'<built-in method __unicode__ of exceptions.IndentationError object at 0x392de60>'
+p57
+sS'__delattr__'
+p58
+S"<method-wrapper '__delattr__' of exceptions.IndentationError object at 0x392de60>"
+p59
+sS'__repr__'
+p60
+S"<method-wrapper '__repr__' of exceptions.IndentationError object at 0x392de60>"
+p61
+sS'__hash__'
+p62
+S"<method-wrapper '__hash__' of exceptions.IndentationError object at 0x392de60>"
+p63
+ssS'evalue'
+p64
+S'unexpected indent (default.py, line 18)'
+p65
+sS'request'
+p66
+(dp67
+S'function'
+p68
+S"'index'"
+p69
+sS'body'
+p70
+S'<cStringIO.StringO object at 0x35a8ea0>'
+p71
+sS'wsgi'
+p72
+S"<Storage {'start_response': <function <lambda> a...PT_ENCODING': 'gzip,deflate', 'PATH_INFO': '/'}}>"
+p73
+sS'extension'
+p74
+S"'html'"
+p75
+sS'vars'
+p76
+S'<Storage {}>'
+p77
+sS'cid'
+p78
+S'None'
+p79
+sS'url'
+p80
+S'<gluon.html.XML object at 0x35c2510>'
+p81
+sS'raw_extension'
+p82
+S'None'
+p83
+sg51
+S'[]'
+p84
+sS'controller'
+p85
+S"'default'"
+p86
+sS'cookies'
+p87
+S'<SimpleCookie: >'
+p88
+sS'application'
+p89
+S"'listool'"
+p90
+sS'ajax'
+p91
+S'False'
+p92
+sS'client'
+p93
+S"'127.0.0.1'"
+p94
+sS'env'
+p95
+S"<Storage {'wsgi_multithread': True, 'http_accept...False, 'remote_port': '49479', 'path_info': '/'}>"
+p96
+sS'raw_args'
+p97
+S'None'
+p98
+sS'get_vars'
+p99
+S'<Storage {}>'
+p100
+sS'folder'
+p101
+S"'/home/tiago/listool/applications/listool/'"
+p102
+sS'now'
+p103
+S'datetime.datetime(2011, 1, 21, 13, 59, 48, 455994)'
+p104
+sS'post_vars'
+p105
+S'<Storage {}>'
+p106
+ssS'frames'
+p107
+(lp108
+(dp109
+S'file'
+p110
+S'/home/tiago/listool/gluon/restricted.py'
+p111
+sS'dump'
+p112
+(dp113
+S'code'
+p114
+S"'# -*- coding: utf-8 -*-\\n# this file is released ...vice()\\n\\n\\n\\nresponse._vars=response._caller(index)\\n'"
+p115
+sS'layer'
+p116
+S"'/home/tiago/listool/applications/listool/controllers/default.py'"
+p117
+sS'global compile2'
+p118
+S'<function compile2 at 0x2b8cf50>'
+p119
+sS'ccode'
+p120
+S'undefined'
+p121
+ssS'lnum'
+p122
+I186
+sS'lines'
+p123
+(dp124
+I181
+S''
+sI182
+S'    try:'
+p125
+sI183
+S'        if type(code) == types.CodeType:'
+p126
+sI184
+S'            ccode = code'
+p127
+sI185
+S'        else:'
+p128
+sI186
+S'            ccode = compile2(code,layer)'
+p129
+sI187
+S''
+sI188
+S'        exec ccode in environment'
+p130
+sI189
+S'    except HTTP:'
+p131
+sI190
+S'        raise'
+p132
+ssS'call'
+p133
+S"(code='# -*- coding: utf-8 -*-\\n# this file is released ...vice()\\n\\n\\n\\nresponse._vars=response._caller(index)\\n', environment={'A': <class 'gluon.html.A'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'CENTER': <class 'gluon.html.CENTER'>, 'CLEANUP': <class 'gluon.validators.CLEANUP'>, 'CODE': <class 'gluon.html.CODE'>, 'CRYPT': <class 'gluon.validators.CRYPT'>, ...}, layer='/home/tiago/listool/applications/listool/controllers/default.py')"
+p134
+sS'func'
+p135
+S'restricted'
+p136
+sa(dp137
+g110
+S'/home/tiago/listool/gluon/restricted.py'
+p138
+sg112
+(dp139
+S'builtincompile'
+p140
+S'<built-in function compile>'
+p141
+sS'code'
+p142
+S"'# -*- coding: utf-8 -*-\\n# this file is released ...vice()\\n\\n\\n\\nresponse._vars=response._caller(index)\\n'"
+p143
+sS'code.rstrip'
+p144
+S'<built-in method rstrip of str object at 0x2ceda60>'
+p145
+sS').replace'
+p146
+g121
+sS'layer'
+p147
+S"'/home/tiago/listool/applications/listool/controllers/default.py'"
+p148
+ssg122
+I173
+sg123
+(dp149
+I168
+S''
+sI169
+S'def compile2(code,layer):'
+p150
+sI170
+S'    """'
+p151
+sI171
+S"    The +'\\n' is necessary else compile fails when code ends in a comment."
+p152
+sI172
+S'    """'
+p153
+sI173
+S"    return compile(code.rstrip().replace('\\r\\n','\\n')+'\\n', layer, 'exec')"
+p154
+sI174
+S''
+sI175
+S"def restricted(code, environment={}, layer='Unknown'):"
+p155
+sI176
+S'    """'
+p156
+sI177
+S'    runs code in environment and returns the output. if an exception occurs'
+p157
+ssg133
+S"(code='# -*- coding: utf-8 -*-\\n# this file is released ...vice()\\n\\n\\n\\nresponse._vars=response._caller(index)\\n', layer='/home/tiago/listool/applications/listool/controllers/default.py')"
+p158
+sg135
+S'compile2'
+p159
+sasS'pyver'
+p160
+S'Python 2.6.4: /usr/bin/python'
+p161
+sS'session'
+p162
+(dp163
+S'auth'
+p164
+S'None'
+p165
+ssS'etype'
+p166
+S"<type 'exceptions.IndentationError'>"
+p167
+sS'date'
+p168
+S'Fri Jan 21 13:59:48 2011'
+p169
+sS'response'
+p170
+(dp171
+S'status'
+p172
+S'200'
+p173
+sg70
+S'<cStringIO.StringO object at 0x35a8650>'
+p174
+sg87
+S"<SimpleCookie: session_id_listool='127.0.0.1-a77b5edd-0db8-4598-97b3-c54a8dfc7b7b'>"
+p175
+sS'_vars'
+p176
+S'None'
+p177
+sS'title'
+p178
+S"'listool'"
+p179
+sS'menu'
+p180
+S"[(<lazyT 'Home'>, False, <gluon.html.XML object at 0x36773d0>, []), (<lazyT 'This App'>, False, <gluon.html.XML object at 0x3677450>, [(<lazyT 'Controller'>, False, <gluon.html.XML object at 0x36774d0>), (<lazyT 'View'>, False, <gluon.html.XML object at 0x3677550>), (<lazyT 'Layout'>, False, <gluon.html.XML object at 0x36775d0>), (<lazyT 'Stylesheet'>, False, <gluon.html.XML object at 0x3677650>), (<lazyT 'DB Model'>, False, <gluon.html.XML object at 0x36776d0>), (<lazyT 'Menu Model'>, False, <gluon.html.XML object at 0x3677750>), (<lazyT 'Database'>, False, <gluon.html.XML object at 0x3677810>), (<lazyT 'Errors'>, False, <gluon.html.XML object at 0x3677890>), (<lazyT 'About'>, False, <gluon.html.XML object at 0x3677910>)]), (<lazyT 'Resources'>, False, None, [(<lazyT 'Documentation'>, False, 'http://www.web2py.com/book', [(<lazyT 'Preface'>, False, 'http://www.web2py.com/book/default/chapter/00'), (<lazyT 'Introduction'>, False, 'http://www.web2py.com/book/default/chapter/01'), (<lazyT 'Python'>, False, 'http://www.web2py.com/book/default/chapter/02'), (<lazyT 'Overview'>, False, 'http://www.web2py.com/book/default/chapter/03'), (<lazyT 'The Core'>, False, 'http://www.web2py.com/book/default/chapter/04'), (<lazyT 'The Views'>, False, 'http://www.web2py.com/book/default/chapter/05'), (<lazyT 'Database'>, False, 'http://www.web2py.com/book/default/chapter/06'), (<lazyT 'Forms and Validators'>, False, 'http://www.web2py.com/book/default/chapter/07'), (<lazyT 'Access Control'>, False, 'http://www.web2py.com/book/default/chapter/08'), (<lazyT 'Services'>, False, 'http://www.web2py.com/book/default/chapter/09'), (<lazyT 'Ajax Recipes'>, False, 'http://www.web2py.com/book/default/chapter/10'), (<lazyT 'Deployment Recipes'>, False, 'http://www.web2py.com/book/default/chapter/11'), (<lazyT 'Other Recipes'>, False, 'http://www.web2py.com/book/default/chapter/12'), (<lazyT 'Buy this book'>, False, 'http://stores.lulu.com/web2py')]), (<lazyT 'Community'>, False, None, [(<lazyT 'Groups'>, False, 'http://www.web2py.com/examples/default/usergroups'), (<lazyT 'Twitter'>, False, 'http://twitter.com/web2py'), (<lazyT 'Live chat'>, False, 'http://mibbit.com/?channel=%23web2py&server=irc.mibbit.net'), (<lazyT 'User Voice'>, False, 'http://web2py.uservoice.com/')]), (<lazyT 'Web2py'>, False, 'http://www.web2py.com', [(<lazyT 'Download'>, False, 'http://www.web2py.com/examples/default/download'), (<lazyT 'Support'>, False, 'http://www.web2py.com/examples/default/support'), (<lazyT 'Quick Examples'>, False, 'http://web2py.com/examples/default/examples'), (<lazyT 'FAQ'>, False, 'http://web2py.com/AlterEgo'), (<lazyT 'Free Applications'>, False, 'http://web2py.com/appliances'), (<lazyT 'Plugins'>, False, 'http://web2py.com/plugins'), (<lazyT 'Recipes'>, False, 'http://web2pyslices.com/'), (<lazyT 'Demo'>, False, 'http://web2py.com/demo_admin'), (<lazyT 'Semantic'>, False, 'http://web2py.com/semantic'), (<lazyT 'Layouts'>, False, 'http://web2py.com/layouts'), (<lazyT 'Videos'>, False, 'http://www.web2py.com/examples/default/videos/')])])]"
+p181
+sS'flash'
+p182
+S"''"
+p183
+sS'session_new'
+p184
+S'True'
+p185
+sS'_custom_rollback'
+p186
+S'None'
+p187
+sS'session_id'
+p188
+S"'127.0.0.1-a77b5edd-0db8-4598-97b3-c54a8dfc7b7b'"
+p189
+sS'headers'
+p190
+S"<Storage {'Expires': 'Fri, 21 Jan 2011 15:59:48 ...he, must-revalidate, post-check=0, pre-check=0'}>"
+p191
+sS'meta'
+p192
+S"<Storage {'keywords': 'web2py, python, framework... 'Web2py Enterprise Framework', 'author': 'you'}>"
+p193
+sS'session_filename'
+p194
+S"'/home/tiago/listool/applications/listool/sessions/127.0.0.1-a77b5edd-0db8-4598-97b3-c54a8dfc7b7b'"
+p195
+sS'postprocessing'
+p196
+S'[]'
+p197
+sS'_caller'
+p198
+S'<function <lambda> at 0x3591488>'
+p199
+sS'_view_environment'
+p200
+S"{'A': <class 'gluon.html.A'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'CENTER': <class 'gluon.html.CENTER'>, 'CLEANUP': <class 'gluon.validators.CLEANUP'>, 'CODE': <class 'gluon.html.CODE'>, 'CRYPT': <class 'gluon.validators.CRYPT'>, ...}"
+p201
+sS'subtitle'
+p202
+S"<lazyT 'customize me!'>"
+p203
+sS'session_id_name'
+p204
+S"'session_id_listool'"
+p205
+sS'_custom_commit'
+p206
+S'None'
+p207
+sS'files'
+p208
+S'[]'
+p209
+sS'view'
+p210
+S"'default/index.html'"
+p211
+ssS'locals'
+p212
+(dp213
+g3
+S"'/home/tiago/listool/applications/listool/controllers/default.py'"
+p214
+sg5
+S"'# -*- coding: utf-8 -*-\\n# this file is released ...vice()\\n\\n\\n\\nresponse._vars=response._caller(index)\\n'"
+p215
+sssS'traceback'
+p216
+S'Traceback (most recent call last):\n  File "/home/tiago/listool/gluon/restricted.py", line 186, in restricted\n    ccode = compile2(code,layer)\n  File "/home/tiago/listool/gluon/restricted.py", line 173, in compile2\n    return compile(code.rstrip().replace(\'\\r\\n\',\'\\n\')+\'\\n\', layer, \'exec\')\n  File "/home/tiago/listool/applications/listool/controllers/default.py", line 18\n    a = get_courses()\n   ^\nIndentationError: unexpected indent\n'
+p217
+s.

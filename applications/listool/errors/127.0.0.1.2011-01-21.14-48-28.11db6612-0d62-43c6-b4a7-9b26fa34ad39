@@ -1,0 +1,453 @@
+(dp1
+S'output'
+p2
+S''
+sS'layer'
+p3
+S'/home/tiago/listool/applications/listool/models/helpers.py'
+p4
+sS'code'
+p5
+S'import urllib\nimport string\n\ndef get_courses():\n\turl = \'http://www.vestibular.ufrgs.br/cv2011/DENSIDADE_2011.HTM\'\n\tsock = urllib.urlopen(url)\n\tcourses = []\n\tfor line in sock.readlines():\n\t\tif line[:3] == \'<B>\' and line[5].isdigit():\n\t\t\tcourses.append(line.split(\'  \')[1].strip())\n\treturn courses\n\ndef get_people(course_name, letter):\n\turl = \'http://www.ufrgs.br/coperse/cv2010/listao/CV2010_%s.htm\' % letter\n\tpeople = []\n\tsock = urllib.urlopen(url)\n\tfor line in sock.readlines():\n\t\tif line.split(\'  \')[-1].strip() == course_name:\n\t\t\tpeople.append(" ".join(line.split(\'  \')[0].split()[6:])\n\treturn people\n'
+p6
+sS'snapshot'
+p7
+(dp8
+S'exception'
+p9
+(dp10
+S'__getslice__'
+p11
+S"<method-wrapper '__getslice__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p12
+sS'text'
+p13
+S"'\\treturn people\\n'"
+p14
+sS'__str__'
+p15
+S"<method-wrapper '__str__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p16
+sS'__reduce__'
+p17
+S'<built-in method __reduce__ of exceptions.SyntaxError object at 0x2f0c6e0>'
+p18
+sS'__dict__'
+p19
+S'{}'
+p20
+sS'__sizeof__'
+p21
+S'<built-in method __sizeof__ of exceptions.SyntaxError object at 0x2f0c6e0>'
+p22
+sS'__init__'
+p23
+S"<method-wrapper '__init__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p24
+sS'__setattr__'
+p25
+S"<method-wrapper '__setattr__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p26
+sS'__reduce_ex__'
+p27
+S'<built-in method __reduce_ex__ of exceptions.SyntaxError object at 0x2f0c6e0>'
+p28
+sS'__new__'
+p29
+S'<built-in method __new__ of type object at 0x812460>'
+p30
+sS'__format__'
+p31
+S'<built-in method __format__ of exceptions.SyntaxError object at 0x2f0c6e0>'
+p32
+sS'__class__'
+p33
+S"<type 'exceptions.SyntaxError'>"
+p34
+sS'filename'
+p35
+S"'/home/tiago/listool/applications/listool/models/helpers.py'"
+p36
+sS'lineno'
+p37
+S'20'
+p38
+sS'msg'
+p39
+S"'invalid syntax'"
+p40
+sS'__doc__'
+p41
+S"'Invalid syntax.'"
+p42
+sS'__getitem__'
+p43
+S"<method-wrapper '__getitem__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p44
+sS'__setstate__'
+p45
+S'<built-in method __setstate__ of exceptions.SyntaxError object at 0x2f0c6e0>'
+p46
+sS'__getattribute__'
+p47
+S"<method-wrapper '__getattribute__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p48
+sS'print_file_and_line'
+p49
+S'None'
+p50
+sS'args'
+p51
+S"('invalid syntax', ('/home/tiago/listool/applications/listool/models/helpers.py', 20, 7, '\\treturn people\\n'))"
+p52
+sS'__subclasshook__'
+p53
+S'<built-in method __subclasshook__ of type object at 0x812460>'
+p54
+sS'offset'
+p55
+S'7'
+sS'__unicode__'
+p56
+S'<built-in method __unicode__ of exceptions.SyntaxError object at 0x2f0c6e0>'
+p57
+sS'__delattr__'
+p58
+S"<method-wrapper '__delattr__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p59
+sS'__repr__'
+p60
+S"<method-wrapper '__repr__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p61
+sS'__hash__'
+p62
+S"<method-wrapper '__hash__' of exceptions.SyntaxError object at 0x2f0c6e0>"
+p63
+ssS'evalue'
+p64
+S'invalid syntax (helpers.py, line 20)'
+p65
+sS'request'
+p66
+(dp67
+S'function'
+p68
+S"'index'"
+p69
+sS'body'
+p70
+S'<cStringIO.StringO object at 0x2f01490>'
+p71
+sS'wsgi'
+p72
+S"<Storage {'start_response': <function <lambda> a...PT_ENCODING': 'gzip,deflate', 'PATH_INFO': '/'}}>"
+p73
+sS'extension'
+p74
+S"'html'"
+p75
+sS'vars'
+p76
+S'<Storage {}>'
+p77
+sS'cid'
+p78
+S'None'
+p79
+sS'url'
+p80
+S'<gluon.html.XML object at 0x2f23110>'
+p81
+sS'raw_extension'
+p82
+S'None'
+p83
+sg51
+S'[]'
+p84
+sS'controller'
+p85
+S"'default'"
+p86
+sS'cookies'
+p87
+S"<SimpleCookie: session_id_admin='127.0.0.1-56374...'127.0.0.1-85236b73-2b05-49ad-a389-694587ea94e2'>"
+p88
+sS'application'
+p89
+S"'listool'"
+p90
+sS'ajax'
+p91
+S'False'
+p92
+sS'client'
+p93
+S"'127.0.0.1'"
+p94
+sS'env'
+p95
+S"<Storage {'wsgi_multithread': True, 'http_accept...False, 'remote_port': '38500', 'path_info': '/'}>"
+p96
+sS'raw_args'
+p97
+S'None'
+p98
+sS'get_vars'
+p99
+S'<Storage {}>'
+p100
+sS'folder'
+p101
+S"'/home/tiago/listool/applications/listool/'"
+p102
+sS'now'
+p103
+S'datetime.datetime(2011, 1, 21, 14, 48, 28, 389731)'
+p104
+sS'post_vars'
+p105
+S'<Storage {}>'
+p106
+ssS'frames'
+p107
+(lp108
+(dp109
+S'file'
+p110
+S'/home/tiago/listool/gluon/restricted.py'
+p111
+sS'dump'
+p112
+(dp113
+S'code'
+p114
+S'"import urllib\\nimport string\\n\\ndef get_courses():\\n...(line.split(\'  \')[0].split()[6:])\\n\\treturn people\\n"'
+p115
+sS'layer'
+p116
+S"'/home/tiago/listool/applications/listool/models/helpers.py'"
+p117
+sS'global compile2'
+p118
+S'<function compile2 at 0x2b8cf50>'
+p119
+sS'ccode'
+p120
+S'undefined'
+p121
+ssS'lnum'
+p122
+I186
+sS'lines'
+p123
+(dp124
+I181
+S''
+sI182
+S'    try:'
+p125
+sI183
+S'        if type(code) == types.CodeType:'
+p126
+sI184
+S'            ccode = code'
+p127
+sI185
+S'        else:'
+p128
+sI186
+S'            ccode = compile2(code,layer)'
+p129
+sI187
+S''
+sI188
+S'        exec ccode in environment'
+p130
+sI189
+S'    except HTTP:'
+p131
+sI190
+S'        raise'
+p132
+ssS'call'
+p133
+S'(code="import urllib\\nimport string\\n\\ndef get_courses():\\n...(line.split(\'  \')[0].split()[6:])\\n\\treturn people\\n", environment={\'A\': <class \'gluon.html.A\'>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'CENTER\': <class \'gluon.html.CENTER\'>, \'CLEANUP\': <class \'gluon.validators.CLEANUP\'>, \'CODE\': <class \'gluon.html.CODE\'>, \'CRYPT\': <class \'gluon.validators.CRYPT\'>, ...}, layer=\'/home/tiago/listool/applications/listool/models/helpers.py\')'
+p134
+sS'func'
+p135
+S'restricted'
+p136
+sa(dp137
+g110
+S'/home/tiago/listool/gluon/restricted.py'
+p138
+sg112
+(dp139
+S'builtincompile'
+p140
+S'<built-in function compile>'
+p141
+sS'code'
+p142
+S'"import urllib\\nimport string\\n\\ndef get_courses():\\n...(line.split(\'  \')[0].split()[6:])\\n\\treturn people\\n"'
+p143
+sS'code.rstrip'
+p144
+S'<built-in method rstrip of str object at 0x38bcba0>'
+p145
+sS').replace'
+p146
+g121
+sS'layer'
+p147
+S"'/home/tiago/listool/applications/listool/models/helpers.py'"
+p148
+ssg122
+I173
+sg123
+(dp149
+I168
+S''
+sI169
+S'def compile2(code,layer):'
+p150
+sI170
+S'    """'
+p151
+sI171
+S"    The +'\\n' is necessary else compile fails when code ends in a comment."
+p152
+sI172
+S'    """'
+p153
+sI173
+S"    return compile(code.rstrip().replace('\\r\\n','\\n')+'\\n', layer, 'exec')"
+p154
+sI174
+S''
+sI175
+S"def restricted(code, environment={}, layer='Unknown'):"
+p155
+sI176
+S'    """'
+p156
+sI177
+S'    runs code in environment and returns the output. if an exception occurs'
+p157
+ssg133
+S'(code="import urllib\\nimport string\\n\\ndef get_courses():\\n...(line.split(\'  \')[0].split()[6:])\\n\\treturn people\\n", layer=\'/home/tiago/listool/applications/listool/models/helpers.py\')'
+p158
+sg135
+S'compile2'
+p159
+sasS'pyver'
+p160
+S'Python 2.6.4: /usr/bin/python'
+p161
+sS'session'
+p162
+(dp163
+S'auth'
+p164
+S'None'
+p165
+ssS'etype'
+p166
+S"<type 'exceptions.SyntaxError'>"
+p167
+sS'date'
+p168
+S'Fri Jan 21 14:48:28 2011'
+p169
+sS'response'
+p170
+(dp171
+S'status'
+p172
+S'200'
+p173
+sg70
+S'<cStringIO.StringO object at 0x2effdc0>'
+p174
+sg87
+S"<SimpleCookie: session_id_listool='127.0.0.1-85236b73-2b05-49ad-a389-694587ea94e2'>"
+p175
+sS'_vars'
+p176
+S'None'
+p177
+sS'menu'
+p178
+S'[]'
+p179
+sS'flash'
+p180
+S"''"
+p181
+sS'_custom_rollback'
+p182
+S'None'
+p183
+sS'session_id'
+p184
+S"'127.0.0.1-85236b73-2b05-49ad-a389-694587ea94e2'"
+p185
+sS'headers'
+p186
+S"<Storage {'Expires': 'Fri, 21 Jan 2011 16:48:28 ...he, must-revalidate, post-check=0, pre-check=0'}>"
+p187
+sS'meta'
+p188
+S'<Storage {}>'
+p189
+sS'session_filename'
+p190
+S"'/home/tiago/listool/applications/listool/sessions/127.0.0.1-85236b73-2b05-49ad-a389-694587ea94e2'"
+p191
+sS'postprocessing'
+p192
+S'[]'
+p193
+sS'session_file'
+p194
+S"<open file '/home/tiago/listool/applications/lis...49ad-a389-694587ea94e2', mode 'rb+' at 0x37bc718>"
+p195
+sS'_view_environment'
+p196
+S"{'A': <class 'gluon.html.A'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'CENTER': <class 'gluon.html.CENTER'>, 'CLEANUP': <class 'gluon.validators.CLEANUP'>, 'CODE': <class 'gluon.html.CODE'>, 'CRYPT': <class 'gluon.validators.CRYPT'>, 'DAL': <class 'gluon.dal.DAL'>, ...}"
+p197
+sS'session_id_name'
+p198
+S"'session_id_listool'"
+p199
+sS'_custom_commit'
+p200
+S'None'
+p201
+sS'_caller'
+p202
+S'<function <lambda> at 0x2f0c140>'
+p203
+sS'files'
+p204
+S'[]'
+p205
+sS'view'
+p206
+S"'default/index.html'"
+p207
+ssS'locals'
+p208
+(dp209
+g3
+S"'/home/tiago/listool/applications/listool/models/helpers.py'"
+p210
+sg5
+S'"import urllib\\nimport string\\n\\ndef get_courses():\\n...(line.split(\'  \')[0].split()[6:])\\n\\treturn people\\n"'
+p211
+sssS'traceback'
+p212
+S'Traceback (most recent call last):\n  File "/home/tiago/listool/gluon/restricted.py", line 186, in restricted\n    ccode = compile2(code,layer)\n  File "/home/tiago/listool/gluon/restricted.py", line 173, in compile2\n    return compile(code.rstrip().replace(\'\\r\\n\',\'\\n\')+\'\\n\', layer, \'exec\')\n  File "/home/tiago/listool/applications/listool/models/helpers.py", line 20\n    return people\n         ^\nSyntaxError: invalid syntax\n'
+p213
+s.
