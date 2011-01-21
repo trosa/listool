@@ -18,6 +18,7 @@ def get_people(course_name, letter):
 	sock = urllib.urlopen(url)
 	for line in sock.readlines():
 		line = line.decode('windows-1252').encode('utf-8')
+		line = line.replace('*',' ')
 		if line.split('  ')[-1].strip() == course_name:
 			people.append(" ".join(line.split('  ')[0].split()[6:]))
 	return people
