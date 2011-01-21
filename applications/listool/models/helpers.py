@@ -12,7 +12,8 @@ def get_courses():
 	return courses
 
 def get_people(course_name, letter):
-	url = 'http://www.ufrgs.br/coperse/cv2010/listao/CV2010_%s.htm' % letter
+	#url = 'http://www.ufrgs.br/coperse/cv2010/listao/CV2010_%s.htm' % letter
+	url = 'http://www.ufrgs.br/CVResultados/listao/CV2011_%s.htm' % letter
 	people = []
 	sock = urllib.urlopen(url)
 	for line in sock.readlines():
