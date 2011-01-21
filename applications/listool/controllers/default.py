@@ -15,7 +15,9 @@ def index():
     rendered by views/default/index.html or views/generic.html
     """
     response.flash = T('You are successfully running web2py.')
-    return dict(message=T('Hello World'))
+    a = get_courses()
+    b = get_people(a[0], 'A')
+    return b
 
 def user():
     """
