@@ -6,6 +6,7 @@ def get_courses():
 	sock = urllib.urlopen(url)
 	courses = []
 	for line in sock.readlines():
+		line = line.decode('windows-1252').encode('utf-8')
 		if line[:3] == '<B>' and line[5].isdigit():
 			courses.append(line.split('  ')[1].strip())
 	return courses
@@ -15,6 +16,7 @@ def get_people(course_name, letter):
 	people = []
 	sock = urllib.urlopen(url)
 	for line in sock.readlines():
+		line = line.decode('windows-1252').encode('utf-8')
 		if line.split('  ')[-1].strip() == course_name:
 			people.append(" ".join(line.split('  ')[0].split()[6:]))
 	return people

@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+import string
+
 # this file is released under public domain and you can use without limitations
 
 #########################################################################
@@ -14,10 +17,12 @@ def index():
     example action using the internationalization operator T and flash
     rendered by views/default/index.html or views/generic.html
     """
-    response.flash = T('You are successfully running web2py.')
-    a = get_courses()
-    b = get_people(a[0], 'A')
-    return b
+    if not 'course' in request.vars:
+        return dict(people='')
+    people = []
+    for letter in string.uppercase:
+        people += get_people(request.vars['course'], letter)
+    return dict(people=people)
 
 def user():
     """

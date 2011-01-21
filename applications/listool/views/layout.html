@@ -76,7 +76,6 @@
 	
 	<div id="header"> <!-- header and login nav -->
 	  {{block header}} <!-- this is default header -->
-	  {{try:}}{{=auth.navbar(action=URL('default','user'))}}{{except:pass}}		          
 	  <div id="logo"><!-- put your logo here --></div>
 	  <div style="clear: both;"></div><!-- Clear the divs -->
 	  {{end}}				  					  
